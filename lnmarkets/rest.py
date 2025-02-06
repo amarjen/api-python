@@ -217,8 +217,7 @@ class LNMarketsRest():
         params = {}
 
         return self.before_request_api(method, path, params, credentials)
-    
-    
+
     def futures_get_trade(self, params):
         method = 'GET'
         trade_id = params.get('id')  
@@ -227,6 +226,12 @@ class LNMarketsRest():
 
         return self.before_request_api(method, path, params, credentials)
 
+     def futures_get_ohlcs(self):
+        method = 'GET'
+        path = '/futures/ohlcs'
+        credentials = False
+
+        return self.before_request_api(method, path, params, credentials)
     
 
 
